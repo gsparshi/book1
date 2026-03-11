@@ -1,0 +1,207 @@
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f3c3d0;">
+      <a class="navbar-brand" href="#"> <img src="readingapp/static/image/logobook.png" width="50" height="50" class="d-inline-block align-top" alt=""><font size="6px" face="Gabriola">
+        Bookclub</font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/login"><font size="5px" face="Gabriola">Login</font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register"><font size="5px" face="Gabriola">Register</font></a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="text" value="{{books.book_name}}" placeholder="Search Book" name="search">
+          <button class="btn btn btn-outline-white my-2 my-sm-0" style="background-color: #ffffff;" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #fe76b1;"></i></button>
+         </form>
+      </div>
+    </nav>
+  </section>
+  <!-- <section style="margin-top: 1%;">
+    <div class="items">
+      <marquee direction="right" scrollamount="15" behavior="slide"
+      onmouseout="start()"
+      onmouseover="stop()">
+      <img src="readingapp/static/image/header1.jpeg">
+     
+  
+    </marquee>
+    </div>
+  </section> -->
+  <section class="mt-2 p-0">
+  <div class="container-fluid p-0">
+    
+      <img src="readingapp/static/image/header.jpeg"
+           style="width:100%; height:30vh; object-fit:cover;">
+       
+    
+  </div>
+</section>
+  <section  class="container-fluid" style="margin-top:20px;">
+    <h4 style="text-align: center;"><font size="6px" face="Gabriola">RECENT SERIES OF BOOK COLLECTION</font></h4>
+    <hr style="margin-bottom: 1.5%;"></section>    
+<section>
+    <div class="container-fluid" style="margin-top:2%;">
+        <div class="row">
+        {% for books in viewbook %}
+        <div class="col-md-2">
+  
+    <div class="card-deck">
+        <div class="card" style="border-color:rgb(239, 73, 136); margin-top: 20px;">
+          <img src="/media/{{ books.book_img }}" class="card-img-top"  style="height:220px;">
+          <div class="card-body">
+            <h5 class="card-title">{{books.book_name}}</h5>
+            <a href="/media/{{ books.book_file }}" class="btn btn-outline-transparent" style="margin-bottom: 0%;  border-color:rgb(239, 73, 136);">Read</a> </div>
+        </div>
+    </div>
+    </div>
+       {% endfor %}
+    </div>
+    </div>
+</section>
+<hr style="margin-bottom: 1.5%;"></section>
+         <section>
+            <div  class="container" class="jumbotron" style="background-color: #f3c3d0;">
+                <br>
+                <h1 class="display-6" style="margin-top:1%;"><font font-weight="bold" face="Gabriola">Escape into a book, anytime, anywhere-let our website be your guide
+                </font></h1>
+                <hr>
+                <p class="lead"><font face="Gabriola">On Bookclub,Reading a book is like embarking on a journey to another world, where imagination takes flight and knowledge unfolds with every page. It offers a quiet escape from the hustle and bustle of daily life, allowing you to dive deep into stories, explore new ideas, and gain different perspectives. Whether for relaxation, learning, or inspiration, the act of reading enriches the mind and nurtures the soul, making it an invaluable habit.</font> </p>
+                <p class="lead"><font face="Gabriola">
+                Moreover, reading can be a deeply personal and meditative experience. It offers a moment of solitude, allowing you to slow down and connect with the text in a meaningful way. This connection not only enhances your empathy but also provides a sense of comfort and relaxation, making reading a cherished pastime for many.
+                </font> </p>
+                <hr class="my-4">
+                <a class="btn btn-outline-transparent btn-sm" href="addbook" role="button" style="margin-bottom: 1%;  border-color:rgb(239, 73, 136); background-color:white ; padding-top:0%; padding-bottom:0%;">
+            <font size="6px" face="Gabriola">Add Your Book</font></a>
+              </div>
+        </section>
+<section  class="container-fluid" style="margin-top:20px;"  data-aos="fade-up">
+    <h4 style="text-align: center;"><font size="6px" face="Gabriola">EXPLORE OUR BOOK SEGMENT</font></h4>
+    <hr style="margin-bottom: 1.5%;"></section>
+    <section  class="container-fluid" style="margin-top:10px;"  data-aos="fade-up">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <!--card code-->
+            <div class="card border-outline-light mb-3" style="max-width: 15rem; border-color:rgb(239, 73, 136);">
+                 
+                <div class="card-body">
+                    <a href=""><img src="readingapp/static/image/classic.jfif" class="card-img-top" style="margin-bottom: 4%;"></a>
+                 
+                    <h4 class="card-title"><font size="6px" face="Gabriola">Classic</font></h4>
+                </div>
+                   </div>
+              
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <!--card code-->
+            <div class="card border-outline-light mb-3" style="max-width: 15rem; border-color:rgb(239, 73, 136)">
+                
+                <div class="card-body">
+                    <a href=""><img src="readingapp/static/image/mystery.jfif" class="card-img-top"style="margin-bottom: 4%;"></a>
+                 
+                    <h4 class="card-title"><font size="6px" face="Gabriola">Mystery</font></h4>
+                      </div>
+                </div>
+        
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <!--card code-->
+            <div class="card border-outline-light mb-3" style="max-width: 15rem; border-color:rgb(239, 73, 136)">
+                
+                <div class="card-body">
+                    <a href=""><img src="readingapp/static/image/romantic.jfif" class="card-img-top"style="margin-bottom: 4%;"></a>
+                 
+                    <h4 class="card-title"><font size="6px" face="Gabriola">Romantic</font></h4>
+                      </div>
+                </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+          <!--card code-->
+          <div class="card border-outline-light mb-3" style="max-width: 15rem; border-color:rgb(239, 73, 136)">
+            
+            <div class="card-body">
+                <a href=""><img src="readingapp/static/image/spiritual.jfif" class="card-img-top"style="margin-bottom: 4%;"></a>
+                
+                <h4 class="card-title"><font size="6px" face="Gabriola">Spiritual</font></h4>
+                  </div>
+          </div>
+      </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <!--card code-->
+            <div class="card border-outline-light mb-3" style="max-width: 15rem; border-color:rgb(239, 73, 136);">
+              
+              <div class="card-body">
+                <a href=""><img src="readingapp/static/image/fiction.jfif" class="card-img-top"style="margin-bottom: 4%;"></a>
+                   
+                  <h4 class="card-title"><font size="6px" face="Gabriola">Fiction</font></h4>
+                     </div>
+            </div>
+        </div>
+      
+        <div class="col-sm-6 col-md-4 col-lg-2">
+            <!--card code-->
+            <div class="card border-outline-light mb-2" style="max-width: 15rem; border-color:rgb(239, 73, 136);">
+                 
+                <div class="card-body">
+                    <a href=""><img src="readingapp/static/image/adventure.jfif" class="card-img-top"style="margin-bottom: 4%;"></a>
+                 
+                  <h4 class="card-title"><font size="6px" face="Gabriola">Adventure</font></h4>
+                </div>
+            </div>
+              
+        </div>
+       
+    </section>
+    <section>
+        <hr style="margin-top: 1%;">
+    </section>
+    <hr>
+    
+    <section style="margin-top:20px; text-align:center;">
+      <h6>FOLLOW US ON:</h6>
+    <a href="#" ><i class="f fa-brands fa-facebook" style="color:blue; margin-right: 20px; font-size:30px;"></i></a>
+    <a href="#" ><i class="f fa-brands fa-whatsapp" style="color: lawngreen; margin-right: 20px; font-size:30px;"></i></a>
+    <a href="https://youtube.com/@sparshigupta_?si=JqPdEOtTTK8Ztk0d" ><i class="f fa-brands fa-youtube" style="color:red; margin-right: 20px; font-size:30px;"></i></a>
+    <a href="https://www.instagram.com/invites/contact/?igsh=e1y6vqbztdnx&utm_content=rwgikur" ><i class="f fa-brands fa-instagram" style="background:linear-gradient(to bottom,rgb(230, 24, 113),red,yellow); color:white; border-radius:15%; margin-right: 20px; font-size:30px;"></i></a>
+    <a href="https://t.me/Sparshi_g7550" ><i class="f fa-brands fa-telegram" style="color:darkturquoise; margin-right: 20px;font-size:30px;"></i></a>
+      <hr>
+    </section>
+  
+<section>
+    <div  class="container-fluid" class="jumbotron" style="background-color: #f3c3d0;">
+           
+    <div class=row style="padding-top: 40px;">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+        <a href="vision" style="color:rgb(0, 0, 0);">Vision</a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+          <a href="addbook" style="color:rgb(0, 0, 0);"> Partner with us</a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3"style="margin-top: 10px;">
+            <a href="blog" style="color:rgb(0, 0, 0);">Blog</a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3"style="margin-top: 10px;">
+            <a href="firstpage" style="color:rgb(0, 0, 0);">Home</a>
+        </div>
+        </div>
+        <div class=row style="margin-top: 5px; padding-bottom: 40px;">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+              <a href="firstpage" style="color:rgb(0, 0, 0);">Contact us</a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+              <a href="addbook" style="color:rgb(0, 0, 0);"> Add a book</a>
+        </div>
+        
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+                  <a href="volunteer" style="color:rgb(0, 0, 0);">Volunteer</a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="margin-top: 10px;">
+                  <a href="tc" style="color:rgb(0, 0, 0);">  Terms & Condition</a>
+            </div>
+       
+</section>
